@@ -1,1 +1,27 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    double sizeGB, speed;
+    double sizeBits, timesec;
+    int hours, minutes, seconds;
+
+    cout << "Enter the file size in gigabytes: ";
+    cin >> sizeGB;
+
+    cout << "Enter the internet speed in bits per second: ";
+    cin >> speed;
+
+    sizeBits = sizeGB * 8 * 1024 * 1024 * 1024;
+    timesec = sizeBits / speed;
+
+    hours = timesec / 3600;
+    minutes = (timesec - hours * 3600) / 60;
+    seconds = timesec - hours * 3600 - minutes * 60;
+
+    cout << "The file will be downloaded in: " << hours << " hours, " << minutes << " minutes, "
+        << seconds << " seconds." << endl;
+
+    return 0;
+}
 
