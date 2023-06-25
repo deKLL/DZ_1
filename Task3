@@ -1,0 +1,28 @@
+#include <iostream>
+
+using namespace std;
+
+int main() {
+    int number;
+
+    cout << "Enter a four-digit number: ";
+    cin >> number;
+
+    int digit;
+
+    digit = number % 10;
+    cout << digit;
+
+    digit = (number / 10) % 10;
+    cout << digit;
+
+    digit = (number / 100) % 10;
+    cout << digit;
+
+    digit = (number / 1000) % 10;
+    cout << digit;
+
+    cout << endl;
+
+    return 0;
+}
