@@ -1,0 +1,26 @@
+#include <iostream>
+
+using namespace std;
+
+int main() {
+    int t, hours, minutes, seconds;
+
+    cout << "Enter the time in seconds: ";
+    cin >> t;
+
+    hours = t / 3600;
+    minutes = (t % 3600) / 60;
+    seconds = (t % 3600) % 60;
+
+    cout << "Current time: " << hours << " hours, " << minutes << " minutes, " << seconds << " seconds." << endl;
+
+    int rems = 86400 - t;
+    int remh = rems / 3600;
+    int rem = (rems % 3600) / 60;
+    int remsf = (rems % 3600) % 60;
+
+    cout << "Time remaining until midnight: " << remh << " hours, " << rem << " minutes, "
+        << remsf << " seconds." << endl;
+
+    return 0;
+}
